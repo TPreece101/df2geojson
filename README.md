@@ -4,6 +4,7 @@ This module does exactly what it says on the tin, it allows you to easily conver
 
 ## Installation
 This module can be installed by cloning this repository or via pip as shown below:
+```bash
     pip install df2geojson
-
+```
 ## Usage
