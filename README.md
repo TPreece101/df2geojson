@@ -8,3 +8,23 @@ This module can be installed by cloning this repository or via pip as shown belo
     $ pip install df2geojson
 ```
 ## Usage
+I will show a brief example of each of the functions:
+
+### Convert
+
+#### Syntax
+
+df2geojson.<b>convert</b>(df, LongitudeColumnName, LatitudeColumnName, progress=True)
+
+#### Explanation
+
+This function has 3 necessary arguments: the data frame, the name of the column containing the longitude coordinates in your data frame and the name of the column containing the latitude coordinates in your data frame. The `progress` argument is by default set to true, this denotes whether you want progress of the function as a percentage printed to the console.
+
+#### Example
+
+```Python
+import pandas as pd
+import df2geojson
+
+#Create example dataframe
+```
