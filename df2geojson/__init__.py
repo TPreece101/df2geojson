@@ -32,7 +32,7 @@ def convert(df, LonColName, LatColName, progress=True):
         if progress == True:
             percent = str(round((i/len(df.index))*100,1))
             if(i == (len(df.index) - 1)):
-                sys.stdout.write("Conversion Complete")
+                sys.stdout.write("\rConversion Complete            ")
                 sys.stdout.flush()
             else:
                 sys.stdout.write("\rProgress: %s percent complete" %percent)
@@ -68,7 +68,7 @@ def convert_and_dump(df, LonColName, LatColName, path, progress=True):
         if progress == True:
             percent = str(round((i/len(df.index))*100,1))
             if(i == (len(df.index) - 1)):
-                sys.stdout.write("Conversion Complete")
+                sys.stdout.write("\rConversion Complete            ")
                 sys.stdout.flush()
             else:
                 sys.stdout.write("\rProgress: %s percent complete" %percent)
