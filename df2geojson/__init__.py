@@ -31,8 +31,12 @@ def convert(df, LonColName, LatColName, progress=True):
         geojson["features"].append(tempDict)
         if progress == True:
             percent = str(round((i/len(df.index))*100,1))
-            sys.stdout.write("\rProgress: %s percent complete" %percent)
-            sys.stdout.flush()
+            if(i == (len(df.index) - 1)):
+                sys.stdout.write("Conversion Complete")
+                sys.stdout.flush()
+            else:
+                sys.stdout.write("\rProgress: %s percent complete" %percent)
+                sys.stdout.flush()
     return geojson
 
 def dump(path, geojson):
@@ -63,7 +67,11 @@ def convert_and_dump(df, LonColName, LatColName, path, progress=True):
         geojson["features"].append(tempDict)
         if progress == True:
             percent = str(round((i/len(df.index))*100,1))
-            sys.stdout.write("\rProgress: %s percent complete" %percent)
-            sys.stdout.flush()
+            if(i == (len(df.index) - 1)):
+                sys.stdout.write("Conversion Complete")
+                sys.stdout.flush()
+            else:
+                sys.stdout.write("\rProgress: %s percent complete" %percent)
+                sys.stdout.flush()
     dump(path, geojson)
     
